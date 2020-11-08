@@ -1,0 +1,18 @@
+#!/bin/bash
+# modified for default Azure SLURM cluster
+#SBATCH --job-name="hellompi"
+#SBATCH --output="hellompi.%j.%N.out"
+#SBATCH --partition=hpc
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --export=ALL
+#SBATCH -t 00:10:00
+
+## Environment
+module purge
+module load openmpi/4.0.4
+
+## Use srun to run the job
+
+srun -n 8 ./hello_mpi
+
