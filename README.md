@@ -1,2 +1,2 @@
-# cesm-install
+# cesm
 CESM installation code
