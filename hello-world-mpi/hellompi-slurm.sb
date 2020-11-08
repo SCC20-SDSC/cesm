@@ -10,7 +10,7 @@
 
 ## Environment
 module purge
-module load openmpi/4.0.4
+module load mpi/mvapich2
 
 ## Use srun to run the job
 
